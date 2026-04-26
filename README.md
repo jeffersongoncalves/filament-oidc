@@ -1,6 +1,6 @@
 <div class="filament-hidden">
 
-![Filament OIDC](https://raw.githubusercontent.com/jeffersongoncalves/filament-oidc/1.x/art/jeffersongoncalves-filament-oidc.jpg)
+![Filament OIDC](https://raw.githubusercontent.com/jeffersongoncalves/filament-oidc/1.x/art/jeffersongoncalves-filament-oidc.png)
 
 </div>
 
