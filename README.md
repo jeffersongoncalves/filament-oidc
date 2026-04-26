@@ -1,3 +1,9 @@
+<div class="filament-hidden">
+
+![Filament OIDC](https://raw.githubusercontent.com/jeffersongoncalves/filament-oidc/1.x/art/jeffersongoncalves-filament-oidc.jpg)
+
+</div>
+
 # Filament OIDC
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jeffersongoncalves/filament-oidc.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-oidc)
