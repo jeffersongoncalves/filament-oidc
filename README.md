@@ -169,6 +169,14 @@ Use the named route from your blade templates (e.g. inside a custom user menu):
 composer test
 ```
 
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Security Vulnerabilities
+
+Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+
 ## Credits
 
 - [Jefferson Gonçalves](https://github.com/jeffersongoncalves)
