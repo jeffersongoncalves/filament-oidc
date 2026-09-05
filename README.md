@@ -6,6 +6,8 @@
 
 # Filament OIDC
 
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-FFDD00?style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jeffersongoncalves)
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jeffersongoncalves/filament-oidc.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-oidc)
 [![PHPStan](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-oidc/phpstan.yml?branch=1.x&label=phpstan&style=flat-square)](https://github.com/jeffersongoncalves/filament-oidc/actions/workflows/phpstan.yml)
 [![Tests](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-oidc/tests.yml?branch=1.x&label=tests&style=flat-square)](https://github.com/jeffersongoncalves/filament-oidc/actions/workflows/tests.yml)
