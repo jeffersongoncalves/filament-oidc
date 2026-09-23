@@ -9,3 +9,9 @@ parameters:
     tmpDir: build/phpstan
     checkOctaneCompatibility: true
     checkModelProperties: false
+    ignoreErrors:
+        # The package's namespaced view is not registered during analysis, so Larastan cannot prove view-string.
+        -
+            identifier: argument.type
+            message: '#expects view-string, string given#'
+            path: src/FilamentOidcPlugin.php
