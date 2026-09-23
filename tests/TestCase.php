@@ -38,11 +38,7 @@ abstract class TestCase extends Orchestra
     protected function getEnvironmentSetUp($app): void
     {
         config()->set('database.default', 'testing');
-        config()->set('database.connections.testing', [
-            'driver' => 'sqlite',
-            'database' => ':memory:',
-            'prefix' => '',
-        ]);
+        config()->set('database.connections.testing', $this->testing_connection());
 
         config()->set('app.key', 'base64:'.base64_encode(random_bytes(32)));
 
@@ -54,5 +50,36 @@ abstract class TestCase extends Orchestra
     protected function defineDatabaseMigrations(): void
     {
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+    }
+
+    /**
+     * The original in-memory SQLite connection by default; CI (tests.yml) sets
+     * OIDC_TEST_DB_* to run the same suite on MySQL and PostgreSQL. Not DB_CONNECTION:
+     * Testbench pins it to "testing", which would always win over a driver read from it.
+     *
+     * @return array<string, mixed>
+     */
+    protected function testing_connection(): array
+    {
+        $driver = env('OIDC_TEST_DB_DRIVER', 'sqlite');
+
+        if ($driver === 'sqlite') {
+            return [
+                'driver' => 'sqlite',
+                'database' => ':memory:',
+                'prefix' => '',
+            ];
+        }
+
+        return [
+            'driver' => $driver,
+            'host' => env('OIDC_TEST_DB_HOST', '127.0.0.1'),
+            'port' => env('OIDC_TEST_DB_PORT'),
+            'database' => env('OIDC_TEST_DB_DATABASE', 'testing'),
+            'username' => env('OIDC_TEST_DB_USERNAME', 'root'),
+            'password' => env('OIDC_TEST_DB_PASSWORD', ''),
+            'charset' => $driver === 'pgsql' ? 'utf8' : 'utf8mb4',
+            'prefix' => '',
+        ];
     }
 }
