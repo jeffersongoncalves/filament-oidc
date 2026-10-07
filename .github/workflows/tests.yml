@@ -22,7 +22,7 @@ jobs:
       matrix:
         database: [sqlite, mysql, pgsql]
 
-    name: PHP 8.4 - Laravel 13 - ${{ matrix.database }}
+    name: PHP 8.4 - Laravel 12 - ${{ matrix.database }}
 
     services:
       mysql:
@@ -63,9 +63,9 @@ jobs:
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, pdo_mysql, pdo_pgsql, bcmath, intl, gd, exif, iconv, fileinfo
           coverage: none
 
-      - name: Install dependencies (Laravel 13)
+      - name: Install dependencies (Laravel 12)
         run: |
-          composer require "laravel/framework:^13.0" "orchestra/testbench:^11.0" "pestphp/pest:^4.0" "pestphp/pest-plugin-laravel:^4.0" --dev --no-interaction --no-update
+          composer require "laravel/framework:^12.0" "orchestra/testbench:^10.0" "pestphp/pest:^4.0" "pestphp/pest-plugin-laravel:^4.0" --dev --no-interaction --no-update
           composer update --prefer-stable --prefer-dist --no-interaction
 
       - name: Run tests (sqlite)
