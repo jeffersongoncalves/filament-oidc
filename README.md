@@ -17,11 +17,11 @@ Drop-in OpenID Connect single sign-on for Filament v5 panels, powered by [`jeffe
 
 ## Compatibility
 
-| Plugin Version | Filament | PHP  | Laravel        |
-|----------------|----------|------|----------------|
-| 1.x            | ^3.2     | ^8.2 | ^11.0 \| ^12.0 |
-| 2.x            | ^4.0     | ^8.2 | ^11.28 – ^13.0 |
-| 3.x            | ^5.0     | ^8.2 | ^11.28 – ^13.0 |
+| Plugin Version | Filament |
+|----------------|----------|
+| 1.x            | ^3.2     |
+| 2.x            | ^4.0     |
+| 3.x            | ^5.0     |
 
 > Releases `v1.0.0` and `1.1.0` were published for Filament v5 before the plugin adopted the branch-per-Filament-major layout. Filament v5 users should require `^3.0`.
 
