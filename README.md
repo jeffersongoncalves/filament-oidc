@@ -13,20 +13,22 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-oidc/tests.yml?branch=1.x&label=tests&style=flat-square)](https://github.com/jeffersongoncalves/filament-oidc/actions/workflows/tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/jeffersongoncalves/filament-oidc.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-oidc)
 
-Drop-in OpenID Connect single sign-on for Filament v5 panels, powered by [`jeffersongoncalves/laravel-oidc`](https://github.com/jeffersongoncalves/laravel-oidc). Works in single- and multi-panel apps, supports per-panel guards, and stores OIDC identities in a polymorphic table so the host application's `users` table is never altered.
+Drop-in OpenID Connect single sign-on for Filament v3 panels, powered by [`jeffersongoncalves/laravel-oidc`](https://github.com/jeffersongoncalves/laravel-oidc). Works in single- and multi-panel apps, supports per-panel guards, and stores OIDC identities in a polymorphic table so the host application's `users` table is never altered.
 
 ## Compatibility
 
-| Plugin branch | Filament |
-|---------------|----------|
-| `1.x`         | v5       |
+| Plugin Version | Filament |
+|----------------|----------|
+| 1.x            | ^3.2     |
+| 2.x            | ^4.0     |
+| 3.x            | ^5.0     |
 
-> This plugin is published only for Filament v5. Branch `1.x` is the first major of the plugin and does not follow the legacy table where `1.x` historically targeted Filament v3.
+> Releases `v1.0.0` and `1.1.0` were published for Filament v5 before the plugin adopted the branch-per-Filament-major layout. Filament v5 users should require `^3.0`.
 
 ## Installation
 
 ```bash
-composer require jeffersongoncalves/filament-oidc
+composer require jeffersongoncalves/filament-oidc:"^1.2"
 ```
 
 Publish and run the migration that creates the `oidc_identities` table:
