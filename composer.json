@@ -26,7 +26,7 @@
   "require": {
     "php": "^8.2",
     "filament/filament": "^4.0",
-    "jeffersongoncalves/laravel-oidc": "^1.0",
+    "jeffersongoncalves/laravel-oidc": "^1.3",
     "laravel/socialite": "^5.0",
     "spatie/laravel-package-tools": "^1.14.0"
   },
