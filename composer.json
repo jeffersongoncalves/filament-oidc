@@ -1,6 +1,6 @@
 {
   "name": "jeffersongoncalves/filament-oidc",
-  "description": "Filament 5 plugin for OpenID Connect (OIDC) single sign-on, powered by jeffersongoncalves/laravel-oidc.",
+  "description": "Filament 4 plugin for OpenID Connect (OIDC) single sign-on, powered by jeffersongoncalves/laravel-oidc.",
   "keywords": [
     "jeffersongoncalves",
     "laravel",
@@ -25,7 +25,7 @@
   ],
   "require": {
     "php": "^8.2",
-    "filament/filament": "^5.3",
+    "filament/filament": "^4.0",
     "jeffersongoncalves/laravel-oidc": "^1.0",
     "laravel/socialite": "^5.0",
     "spatie/laravel-package-tools": "^1.14.0"
