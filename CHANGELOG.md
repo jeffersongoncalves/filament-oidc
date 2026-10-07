@@ -2,6 +2,10 @@
 
 All notable changes to `filament-oidc` will be documented in this file.
 
+## 3.0.0 - 2026-10-07
+
+Filament v5 line of the plugin, now on its own `3.x` branch (branch-per-Filament-major layout: 1.x = Filament 3, 2.x = Filament 4, 3.x = Filament 5). Same code as `1.1.0`. Filament v5 users: `composer require jeffersongoncalves/filament-oidc:^3.0`.
+
 ## 1.1.0 - 2026-09-23
 
 ### What's new
@@ -55,6 +59,7 @@ First public release of `filament-oidc`.
 composer require jeffersongoncalves/filament-oidc
 php artisan vendor:publish --tag="filament-oidc-migrations"
 php artisan migrate
+
 
 
 ```
