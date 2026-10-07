@@ -4,7 +4,7 @@ namespace JeffersonGoncalves\Filament\Oidc\Tests\Fixtures;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use JeffersonGoncalves\Filament\Oidc\Concerns\HasOidcIdentities;
+use JeffersonGoncalves\LaravelOidc\Concerns\HasOidcIdentities;
 
 class User extends Authenticatable
 {
