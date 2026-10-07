@@ -25,18 +25,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | OIDC identities table
-    |--------------------------------------------------------------------------
-    |
-    | Where the polymorphic mapping between an authenticatable and its OIDC
-    | identities (issuer + subject) is stored. Adjust the table name when
-    | publishing the migration if you need a different name.
-    |
-    */
-    'identities_table' => 'oidc_identities',
-
-    /*
-    |--------------------------------------------------------------------------
     | Auto-create users
     |--------------------------------------------------------------------------
     |

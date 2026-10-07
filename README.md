@@ -31,10 +31,10 @@ Drop-in OpenID Connect single sign-on for Filament v4 panels, powered by [`jeffe
 composer require jeffersongoncalves/filament-oidc:"^2.0"
 ```
 
-Publish and run the migration that creates the `oidc_identities` table:
+Publish and run the migration that creates the `oidc_identities` table (shipped by `jeffersongoncalves/laravel-oidc`):
 
 ```bash
-php artisan vendor:publish --tag="filament-oidc-migrations"
+php artisan vendor:publish --tag="oidc-migrations"
 php artisan migrate
 ```
 
@@ -104,10 +104,10 @@ https://your-app.test/customer/oidc/callback
 
 ## Linking identities to users
 
-The plugin stores every IdP/subject pair in the `oidc_identities` table and links it to the authenticated model through a polymorphic relationship. Add the `HasOidcIdentities` trait to expose the `oidcIdentities()` relation on your authenticatable model:
+The plugin stores every IdP/subject pair in the `oidc_identities` table (the `OidcIdentity` model from `laravel-oidc`; table name set by `oidc.identities_table`) and links it to the authenticated model through a polymorphic relationship. Add the `HasOidcIdentities` trait to expose the `oidcIdentities()` relation on your authenticatable model:
 
 ```php
-use JeffersonGoncalves\Filament\Oidc\Concerns\HasOidcIdentities;
+use JeffersonGoncalves\LaravelOidc\Concerns\HasOidcIdentities;
 
 class User extends Authenticatable
 {
