@@ -2,6 +2,26 @@
 
 All notable changes to `filament-oidc` will be documented in this file.
 
+## 1.3.0 - 2026-10-07
+
+#### ⚠️ Breaking
+
+The OIDC identity persistence moved to [jeffersongoncalves/laravel-oidc v1.3.0](https://github.com/jeffersongoncalves/laravel-oidc/releases/tag/v1.3.0). Update your code:
+
+- `JeffersonGoncalves\Filament\Oidc\Models\OidcIdentity` → `JeffersonGoncalves\LaravelOidc\Models\OidcIdentity`
+- `JeffersonGoncalves\Filament\Oidc\Concerns\HasOidcIdentities` → `JeffersonGoncalves\LaravelOidc\Concerns\HasOidcIdentities`
+- `filament-oidc.identities_table` → `oidc.identities_table`
+- Migration tag: `filament-oidc-migrations` → `oidc-migrations`
+
+Table name and schema are unchanged; existing data and published migrations keep working.
+
+### What's Changed
+
+* ci: test 1.x on Laravel 13 by @jeffersongoncalves in https://github.com/jeffersongoncalves/filament-oidc/pull/18
+* refactor!: use OidcIdentity from laravel-oidc (1.x) by @jeffersongoncalves in https://github.com/jeffersongoncalves/filament-oidc/pull/19
+
+**Full Changelog**: https://github.com/jeffersongoncalves/filament-oidc/compare/1.2.0...1.3.0
+
 ## 1.2.0 - 2026-10-07
 
 The `1.x` line now targets Filament v3 (`filament/filament` ^3.2, Laravel 11/12). Login button rendered with `<x-filament::button>` for Filament 3 styling. `v1.0.0` and `1.1.0` were Filament v5 releases: Filament v5 users should move to `^3.0`.
@@ -59,6 +79,7 @@ First public release of `filament-oidc`.
 composer require jeffersongoncalves/filament-oidc
 php artisan vendor:publish --tag="filament-oidc-migrations"
 php artisan migrate
+
 
 
 
