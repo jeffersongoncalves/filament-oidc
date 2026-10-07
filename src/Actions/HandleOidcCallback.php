@@ -9,8 +9,8 @@ use JeffersonGoncalves\Filament\Oidc\Events\OidcUserAuthenticated;
 use JeffersonGoncalves\Filament\Oidc\Events\OidcUserCreated;
 use JeffersonGoncalves\Filament\Oidc\Exceptions\OidcAuthenticationException;
 use JeffersonGoncalves\Filament\Oidc\FilamentOidcPlugin;
-use JeffersonGoncalves\Filament\Oidc\Models\OidcIdentity;
 use JeffersonGoncalves\LaravelOidc\Data\OidcUser;
+use JeffersonGoncalves\LaravelOidc\Models\OidcIdentity;
 use Laravel\Socialite\Two\User as SocialiteUser;
 
 class HandleOidcCallback
