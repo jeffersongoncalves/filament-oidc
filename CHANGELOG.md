@@ -2,6 +2,25 @@
 
 All notable changes to `filament-oidc` will be documented in this file.
 
+## 3.1.0 - 2026-10-07
+
+#### ⚠️ Breaking
+
+The OIDC identity persistence moved to [jeffersongoncalves/laravel-oidc v1.3.0](https://github.com/jeffersongoncalves/laravel-oidc/releases/tag/v1.3.0). Update your code:
+
+- `JeffersonGoncalves\Filament\Oidc\Models\OidcIdentity` → `JeffersonGoncalves\LaravelOidc\Models\OidcIdentity`
+- `JeffersonGoncalves\Filament\Oidc\Concerns\HasOidcIdentities` → `JeffersonGoncalves\LaravelOidc\Concerns\HasOidcIdentities`
+- `filament-oidc.identities_table` → `oidc.identities_table`
+- Migration tag: `filament-oidc-migrations` → `oidc-migrations`
+
+Table name and schema are unchanged; existing data and published migrations keep working.
+
+### What's Changed
+
+* refactor!: use OidcIdentity from laravel-oidc (3.x) by @jeffersongoncalves in https://github.com/jeffersongoncalves/filament-oidc/pull/21
+
+**Full Changelog**: https://github.com/jeffersongoncalves/filament-oidc/compare/3.0.0...3.1.0
+
 ## 3.0.0 - 2026-10-07
 
 Filament v5 line of the plugin, now on its own `3.x` branch (branch-per-Filament-major layout: 1.x = Filament 3, 2.x = Filament 4, 3.x = Filament 5). Same code as `1.1.0`. Filament v5 users: `composer require jeffersongoncalves/filament-oidc:^3.0`.
@@ -59,6 +78,7 @@ First public release of `filament-oidc`.
 composer require jeffersongoncalves/filament-oidc
 php artisan vendor:publish --tag="filament-oidc-migrations"
 php artisan migrate
+
 
 
 
