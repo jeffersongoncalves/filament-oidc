@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create(config('filament-oidc.identities_table', 'oidc_identities'), function (Blueprint $table) {
+        Schema::create(config('oidc.identities_table', 'oidc_identities'), function (Blueprint $table) {
             $table->id();
             $table->morphs('authenticatable');
             $table->string('issuer');
@@ -28,6 +28,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists(config('filament-oidc.identities_table', 'oidc_identities'));
+        Schema::dropIfExists(config('oidc.identities_table', 'oidc_identities'));
     }
 };

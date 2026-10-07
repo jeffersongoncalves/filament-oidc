@@ -13,7 +13,6 @@ class FilamentOidcServiceProvider extends PackageServiceProvider
             ->name('filament-oidc')
             ->hasConfigFile()
             ->hasTranslations()
-            ->hasViews()
-            ->hasMigration('create_oidc_identities_table');
+            ->hasViews();
     }
 }
