@@ -2,6 +2,10 @@
 
 All notable changes to `filament-oidc` will be documented in this file.
 
+## 1.2.0 - 2026-10-07
+
+The `1.x` line now targets Filament v3 (`filament/filament` ^3.2, Laravel 11/12). Login button rendered with `<x-filament::button>` for Filament 3 styling. `v1.0.0` and `1.1.0` were Filament v5 releases: Filament v5 users should move to `^3.0`.
+
 ## 1.1.0 - 2026-09-23
 
 ### What's new
@@ -55,6 +59,7 @@ First public release of `filament-oidc`.
 composer require jeffersongoncalves/filament-oidc
 php artisan vendor:publish --tag="filament-oidc-migrations"
 php artisan migrate
+
 
 
 ```
