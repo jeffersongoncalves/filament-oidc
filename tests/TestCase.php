@@ -8,6 +8,7 @@ use JeffersonGoncalves\Filament\Oidc\FilamentOidcServiceProvider;
 use JeffersonGoncalves\Filament\Oidc\Tests\Fixtures\TestPanelProvider;
 use JeffersonGoncalves\Filament\Oidc\Tests\Fixtures\User;
 use JeffersonGoncalves\LaravelOidc\OidcServiceProvider;
+use JeffersonGoncalves\PestPluginDatabaseMigrations\LoadsPackageMigrations;
 use Laravel\Socialite\Facades\Socialite;
 use Laravel\Socialite\SocialiteServiceProvider;
 use Livewire\LivewireServiceProvider;
@@ -15,6 +16,8 @@ use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
 {
+    use LoadsPackageMigrations;
+
     protected function getPackageProviders($app): array
     {
         return [
@@ -50,6 +53,7 @@ abstract class TestCase extends Orchestra
     protected function defineDatabaseMigrations(): void
     {
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+        $this->loadPackageMigrations(OidcServiceProvider::class);
     }
 
     /**
